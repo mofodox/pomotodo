@@ -1,14 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Header from './components/Header'
-
-type SessionType = 'pomodoro' | 'shortBreak' | 'longBreak'
-
-interface TimerSettings {
-  pomodoro: number
-  shortBreak: number
-  longBreak: number
-}
+import Footer from './components/Footer'
+import type { SessionType, TimerSettings } from './types'
 
 function App() {
   const [currentSession, setCurrentSession] = useState<SessionType>('pomodoro')
@@ -303,6 +297,7 @@ function App() {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   )
 }

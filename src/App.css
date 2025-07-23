@@ -24,6 +24,78 @@
   font-weight: 600;
 }
 
+/* Footer Styles */
+.footer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
+  margin-top: auto;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin: 0 0 10px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff6b6b;
+}
+
+.footer-links .separator {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+/* Ensure app takes full height and footer sticks to bottom */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+/* Responsive footer */
+@media (max-width: 640px) {
+  .footer-content p {
+    font-size: 12px;
+  }
+  
+  .footer-links {
+    font-size: 12px;
+  }
+  
+  .footer {
+    padding: 15px 0;
+  }
+}
+
 .settings-btn {
   background: rgba(255, 255, 255, 0.2);
   border: none;
